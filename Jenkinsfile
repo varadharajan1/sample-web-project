@@ -1,9 +1,9 @@
 pipeline {
     agent any
-	tools{
-		name: 'LocalJava8', type: 'jdk',
-		name: 'LocalMaven', type: 'maven'
-	}
+	tools {
+        maven 'LocalMaven'
+		jdk 'LocalJava8'
+    }
     stages{
         stage('Build'){
             steps {
